@@ -35,29 +35,33 @@
     }
 </style>
 
-  <meta name="description" content="千般荒凉，以此为梦。万里蹀躞，以此为归。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="xcatf&#39;s blog">
-<meta property="og:url" content="http://xcatf.com/index.html">
+  <meta name="description" content="安装Nginx1yum install -y nginx  修改nginx配置文件nginx.conf部分内容 1[root@iZwz93tzhqv97y8089coonZ &#x2F;]# vim &#x2F;etc&#x2F;nginx&#x2F;nginx.conf  12345678910111213141516171819202122232425 server &amp;#123;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux服务器下搭建hexo个人博客01：hexo部署到Nginx">
+<meta property="og:url" content="http://xcatf.com/2020/02/16/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A201%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0Nginx/index.html">
 <meta property="og:site_name" content="xcatf&#39;s blog">
-<meta property="og:description" content="千般荒凉，以此为梦。万里蹀躞，以此为归。">
+<meta property="og:description" content="安装Nginx1yum install -y nginx  修改nginx配置文件nginx.conf部分内容 1[root@iZwz93tzhqv97y8089coonZ &#x2F;]# vim &#x2F;etc&#x2F;nginx&#x2F;nginx.conf  12345678910111213141516171819202122232425 server &amp;#123;">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200216193141199.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxMTAxMzQ1OTkyMA==,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-02-16T13:29:58.587Z">
+<meta property="article:modified_time" content="2020-02-16T13:29:58.584Z">
 <meta property="article:author" content="xcatf">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200216193141199.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxMTAxMzQ1OTkyMA==,size_16,color_FFFFFF,t_70">
 
-<link rel="canonical" href="http://xcatf.com/">
+<link rel="canonical" href="http://xcatf.com/2020/02/16/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A201%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0Nginx/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false
+    isHome: false,
+    isPost: true
   };
 </script>
 
-  <title>xcatf's blog</title>
+  <title>Linux服务器下搭建hexo个人博客01：hexo部署到Nginx | xcatf's blog</title>
   
 
 
@@ -200,10 +204,10 @@
             
 
   <div class="posts-expand">
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://xcatf.com/2020/02/16/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A201%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0Nginx/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -217,8 +221,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/16/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A201%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0Nginx/" class="post-title-link" itemprop="url">Linux服务器下搭建hexo个人博客01：hexo部署到Nginx</a>
+          Linux服务器下搭建hexo个人博客01：hexo部署到Nginx
         </h1>
 
         <div class="post-meta">
@@ -231,7 +234,14 @@
               <time title="创建时间：2020-02-16 21:29:58" itemprop="dateCreated datePublished" datetime="2020-02-16T21:29:58+08:00">2020-02-16</time>
             </span>
 
-          <br>
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-file-word-o"></i>
@@ -256,7 +266,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="安装Nginx"><a href="#安装Nginx" class="headerlink" title="安装Nginx"></a>安装Nginx</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y nginx</span><br></pre></td></tr></table></figure>
+        <h3 id="安装Nginx"><a href="#安装Nginx" class="headerlink" title="安装Nginx"></a>安装Nginx</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y nginx</span><br></pre></td></tr></table></figure>
 
 <p>修改nginx配置文件nginx.conf部分内容</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@iZwz93tzhqv97y8089coonZ &#x2F;]# vim &#x2F;etc&#x2F;nginx&#x2F;nginx.conf</span><br></pre></td></tr></table></figure>
@@ -297,108 +307,80 @@
 <h4 id="浏览器访问"><a href="#浏览器访问" class="headerlink" title="浏览器访问"></a>浏览器访问</h4><p>由于之前已经修改Nginx服务器配置文件，所以直接用公网ip访问将会显示hexo博客</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;公网ip&#x2F;</span><br></pre></td></tr></table></figure>
 
-      
     </div>
 
     
     
     
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>xcatf
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://xcatf.com/2020/02/16/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A201%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0Nginx/" title="Linux服务器下搭建hexo个人博客01：hexo部署到Nginx">http://xcatf.com/2020/02/16/Linux服务器下搭建hexo个人博客01：hexo部署到Nginx/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
 
         
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://xcatf.com/2020/02/15/hello-world/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="xcatf">
-      <meta itemprop="description" content="千般荒凉，以此为梦。<br>万里蹀躞，以此为归。">
-    </span>
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="xcatf's blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/15/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h1>
+    <div class="social-list">
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+            <div class="social-item">
+              <a target="_blank" class="social-link" href="/atom.xml">
+                <span class="icon">
+                  <i class="fa fa-rss"></i>
+                </span>
 
-              <time title="创建时间：2020-02-15 16:39:37" itemprop="dateCreated datePublished" datetime="2020-02-15T16:39:37+08:00">2020-02-15</time>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>357</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-clock-o"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
+                <span class="label">RSS</span>
+              </a>
+            </div>
     </div>
+  </div>
 
+     <div>
+         
+         <!--文字可以自己修改-->
+<div>
     
+        <div style="text-align:center;color: #A2CD5A;font-size:15px;">------------------本文到此结束<i class="fa fa-paw"></i>感谢您的阅读------------------</div>
     
-    
+</div>
+
+
+         
+     </div>
       <footer class="post-footer">
-        <div class="post-eof"></div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/02/15/hello-world/" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
       </footer>
+    
   </article>
   
   
   
 
   </div>
-
-  
-
 
 
           </div>
@@ -449,6 +431,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Nginx"><span class="nav-number">1.</span> <span class="nav-text">安装Nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#启动nginx服务"><span class="nav-number">1.1.</span> <span class="nav-text">启动nginx服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置安全组，开放80端口"><span class="nav-number">1.2.</span> <span class="nav-text">配置安全组，开放80端口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Git"><span class="nav-number">1.3.</span> <span class="nav-text">安装Git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Node-js"><span class="nav-number">1.4.</span> <span class="nav-text">安装Node.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装hexo"><span class="nav-number">1.5.</span> <span class="nav-text">安装hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#部署hexo博客"><span class="nav-number">1.6.</span> <span class="nav-text">部署hexo博客</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#浏览器访问"><span class="nav-number">1.7.</span> <span class="nav-text">浏览器访问</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
