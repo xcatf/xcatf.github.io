@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xcatf.com/"/>
-  <updated>2020-02-16T13:29:58.584Z</updated>
+  <updated>2020-02-16T13:43:04.483Z</updated>
   <id>http://xcatf.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>schedule</title>
+    <link href="http://xcatf.com/2020/02/16/schedule/"/>
+    <id>http://xcatf.com/2020/02/16/schedule/</id>
+    <published>2020-02-16T13:43:04.000Z</published>
+    <updated>2020-02-16T13:43:04.483Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>categories</title>
+    <link href="http://xcatf.com/2020/02/16/categories/"/>
+    <id>http://xcatf.com/2020/02/16/categories/</id>
+    <published>2020-02-16T13:39:36.000Z</published>
+    <updated>2020-02-16T13:39:36.816Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Linux服务器下搭建hexo个人博客01：hexo部署到Nginx</title>
