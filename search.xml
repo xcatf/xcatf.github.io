@@ -44,5 +44,11 @@
 <h4 id="浏览器访问"><a href="#浏览器访问" class="headerlink" title="浏览器访问"></a>浏览器访问</h4><p>由于之前已经修改Nginx服务器配置文件，所以直接用公网ip访问将会显示hexo博客</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">http:&#x2F;&#x2F;公网ip&#x2F;</span><br></pre></td></tr></table></figure>
 ]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
   </entry>
 </search>
