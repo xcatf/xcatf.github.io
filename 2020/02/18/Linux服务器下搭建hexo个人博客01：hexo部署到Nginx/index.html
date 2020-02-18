@@ -35,19 +35,21 @@
     }
 </style>
 
-  <meta name="description" content="千般荒凉，以此为梦。万里蹀躞，以此为归。">
+  <meta name="description" content="安装Nginx1yum install -y nginx  修改nginx配置文件nginx.conf部分内容 1[root@iZwz93tzhqv97y8089coonZ &#x2F;]# vim &#x2F;etc&#x2F;nginx&#x2F;nginx.conf  12345678910111213141516171819202122232425 server &amp;#123;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://xcatf.com/2020/02/16/categories/index.html">
+<meta property="og:title" content="Linux服务器下搭建hexo个人博客01：hexo部署到Nginx">
+<meta property="og:url" content="http://xcatf.com/2020/02/18/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A201%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0Nginx/index.html">
 <meta property="og:site_name" content="xcatf&#39;s Blog">
-<meta property="og:description" content="千般荒凉，以此为梦。万里蹀躞，以此为归。">
+<meta property="og:description" content="安装Nginx1yum install -y nginx  修改nginx配置文件nginx.conf部分内容 1[root@iZwz93tzhqv97y8089coonZ &#x2F;]# vim &#x2F;etc&#x2F;nginx&#x2F;nginx.conf  12345678910111213141516171819202122232425 server &amp;#123;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-02-16T13:39:36.000Z">
-<meta property="article:modified_time" content="2020-02-16T13:39:36.816Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200216193141199.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxMTAxMzQ1OTkyMA==,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-02-18T05:18:25.578Z">
+<meta property="article:modified_time" content="2020-02-18T05:18:25.575Z">
 <meta property="article:author" content="xcatf">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200216193141199.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxMTAxMzQ1OTkyMA==,size_16,color_FFFFFF,t_70">
 
-<link rel="canonical" href="http://xcatf.com/2020/02/16/categories/">
+<link rel="canonical" href="http://xcatf.com/2020/02/18/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A201%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0Nginx/">
 
 
 <script id="page-configurations">
@@ -59,7 +61,7 @@
   };
 </script>
 
-  <title>categories | xcatf's Blog</title>
+  <title>Linux服务器下搭建hexo个人博客01：hexo部署到Nginx | xcatf's Blog</title>
   
 
 
@@ -211,7 +213,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://xcatf.com/2020/02/16/categories/">
+    <link itemprop="mainEntityOfPage" href="http://xcatf.com/2020/02/18/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A201%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0Nginx/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -224,7 +226,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          categories
+          Linux服务器下搭建hexo个人博客01：hexo部署到Nginx
         </h1>
 
         <div class="post-meta">
@@ -234,7 +236,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-02-16 21:39:36" itemprop="dateCreated datePublished" datetime="2020-02-16T21:39:36+08:00">2020-02-16</time>
+              <time title="创建时间：2020-02-18 13:18:25" itemprop="dateCreated datePublished" datetime="2020-02-18T13:18:25+08:00">2020-02-18</time>
             </span>
 
           <br>
@@ -243,14 +245,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>0</span>
+              <span>2.3k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -262,7 +264,47 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        
+        <h4 id="安装Nginx"><a href="#安装Nginx" class="headerlink" title="安装Nginx"></a>安装Nginx</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y nginx</span><br></pre></td></tr></table></figure>
+
+<p>修改nginx配置文件nginx.conf部分内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@iZwz93tzhqv97y8089coonZ &#x2F;]# vim &#x2F;etc&#x2F;nginx&#x2F;nginx.conf</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"> server &#123;</span><br><span class="line">        listen       80 default_server;</span><br><span class="line">        server_name  localhost;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">        # Load configuration files for the default server block.</span><br><span class="line">        include &#x2F;etc&#x2F;nginx&#x2F;default.d&#x2F;*.conf;</span><br><span class="line"> </span><br><span class="line">        location &#x2F; &#123;</span><br><span class="line">           # 这里写自己hexo搭建的目录</span><br><span class="line">           root &#x2F;opt&#x2F;hexo&#x2F;public; # public文件夹是hexo生成静态文件的默认文件夹</span><br><span class="line">           index index.html index.htm;</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        error_page 404 &#x2F;404.html;</span><br><span class="line">            location &#x3D; &#x2F;40x.html &#123;</span><br><span class="line">              root  html;</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        error_page 500 502 503 504 &#x2F;50x.html;</span><br><span class="line">            location &#x3D; &#x2F;50x.html &#123;</span><br><span class="line">              root html;</span><br><span class="line">       &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="启动nginx服务"><a href="#启动nginx服务" class="headerlink" title="启动nginx服务"></a>启动nginx服务</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl start nginx</span><br><span class="line">systemctl enable nginx # 开机启动nginx服务</span><br></pre></td></tr></table></figure>
+
+<h4 id="配置安全组，开放80端口"><a href="#配置安全组，开放80端口" class="headerlink" title="配置安全组，开放80端口"></a>配置安全组，开放80端口</h4><p><img src="https://img-blog.csdnimg.cn/20200216193141199.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxMTAxMzQ1OTkyMA==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<h4 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y git</span><br></pre></td></tr></table></figure>
+
+<h4 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h4><p>下载nodejs</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https:&#x2F;&#x2F;nodejs.org&#x2F;dist&#x2F;v12.16.0&#x2F;node-v12.16.0-linux-x64.tar.xz</span><br></pre></td></tr></table></figure>
+
+<p>解压</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf node-v12.16.0-linux-x64.tar.xz</span><br></pre></td></tr></table></figure>
+
+<p>为了简洁，文件重命名为nodejs</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv node-v12.16.0-linux-x64 nodejs</span><br></pre></td></tr></table></figure>
+
+<p>修改配置文件etc/profile</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;profile</span><br></pre></td></tr></table></figure>
+
+<p>在配置文件中添加环境变量：PATH=/opt/nodejs/bin:$PATH</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">for i in &#x2F;etc&#x2F;profile.d&#x2F;*.sh &#x2F;etc&#x2F;profile.d&#x2F;sh.local ; do</span><br><span class="line">    if [ -r &quot;$i&quot; ]; then</span><br><span class="line">        if [ &quot;$&#123;-#*i&#125;&quot; !&#x3D; &quot;$-&quot; ]; then</span><br><span class="line">            . &quot;$i&quot;</span><br><span class="line">        else</span><br><span class="line">            . &quot;$i&quot; &gt;&#x2F;dev&#x2F;null</span><br><span class="line">        fi</span><br><span class="line">    fi</span><br><span class="line">done</span><br><span class="line">PATH&#x3D;&#x2F;root&#x2F;anaconda3&#x2F;bin:$PATH</span><br><span class="line">PATH&#x3D;&#x2F;opt&#x2F;nodejs&#x2F;bin:$PATH</span><br><span class="line">unset i</span><br><span class="line">unset -f pathmunge</span><br></pre></td></tr></table></figure>
+
+<p>重新加载配置文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source &#x2F;etc&#x2F;profile</span><br></pre></td></tr></table></figure>
+
+<p>node -v/npm -v测试</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@iZwz93tzhqv97y8089coonZ &#x2F;]# npm -v</span><br><span class="line">6.13.4</span><br><span class="line">[root@iZwz93tzhqv97y8089coonZ &#x2F;]# node -v</span><br><span class="line">v12.16.0</span><br></pre></td></tr></table></figure>
+
+<h4 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+
+<h4 id="部署hexo博客"><a href="#部署hexo博客" class="headerlink" title="部署hexo博客"></a>部署hexo博客</h4><p>在指定文件夹在部署hexo博客，我选择的是/opt/hexo目录下，与nginx配置文件中目录保持一致</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[root@iZwz93tzhqv97y8089coonZ hexo]# pwd</span><br><span class="line">&#x2F;opt&#x2F;hexo</span><br><span class="line">[root@iZwz93tzhqv97y8089coonZ hexo]# hexo init # 在当前文件夹下建立网站</span><br><span class="line">[root@iZwz93tzhqv97y8089coonZ hexo]# hexo g # 生成静态文件(public文件夹)</span><br><span class="line">[root@iZwz93tzhqv97y8089coonZ hexo]# ll</span><br><span class="line">total 352</span><br><span class="line">-rw-r--r--   1 root root   3412 Feb 16 19:05 _config.yml</span><br><span class="line">-rw-r--r--   1 root root  69279 Feb 16 19:05 db.json</span><br><span class="line">drwxr-xr-x 472 root root  20480 Feb 16 19:04 node_modules</span><br><span class="line">-rw-r--r--   1 root root    772 Feb 16 18:26 package.json</span><br><span class="line">-rw-r--r--   1 root root 241687 Feb 16 18:26 package-lock.json</span><br><span class="line">drwxr-xr-x   9 root root   4096 Feb 16 19:05 public</span><br><span class="line">drwxr-xr-x   2 root root   4096 Feb 15 16:39 scaffolds</span><br><span class="line">drwxr-xr-x   3 root root   4096 Feb 15 17:15 source</span><br><span class="line">drwxr-xr-x   4 root root   4096 Feb 16 15:38 themes</span><br></pre></td></tr></table></figure>
+
+<h4 id="浏览器访问"><a href="#浏览器访问" class="headerlink" title="浏览器访问"></a>浏览器访问</h4><p>由于之前已经修改Nginx服务器配置文件，所以直接用公网ip访问将会显示hexo博客</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http:&#x2F;&#x2F;公网ip&#x2F;</span><br></pre></td></tr></table></figure>
+
     </div>
 
     
@@ -277,7 +319,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://xcatf.com/2020/02/16/categories/" title="categories">http://xcatf.com/2020/02/16/categories/</a>
+    <a href="http://xcatf.com/2020/02/18/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A201%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0Nginx/" title="Linux服务器下搭建hexo个人博客01：hexo部署到Nginx">http://xcatf.com/2020/02/18/Linux服务器下搭建hexo个人博客01：hexo部署到Nginx/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -322,16 +364,6 @@
 
 
         
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2020/02/16/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A201%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0Nginx/" rel="prev" title="Linux服务器下搭建hexo个人博客01：hexo部署到Nginx">
-      <i class="fa fa-chevron-left"></i> Linux服务器下搭建hexo个人博客01：hexo部署到Nginx
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/02/16/schedule/" rel="next" title="schedule">
-      schedule <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
       </footer>
     
   </article>
@@ -390,6 +422,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Nginx"><span class="nav-number">1.</span> <span class="nav-text">安装Nginx</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#启动nginx服务"><span class="nav-number">2.</span> <span class="nav-text">启动nginx服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置安全组，开放80端口"><span class="nav-number">3.</span> <span class="nav-text">配置安全组，开放80端口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Git"><span class="nav-number">4.</span> <span class="nav-text">安装Git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装Node-js"><span class="nav-number">5.</span> <span class="nav-text">安装Node.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装hexo"><span class="nav-number">6.</span> <span class="nav-text">安装hexo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#部署hexo博客"><span class="nav-number">7.</span> <span class="nav-text">部署hexo博客</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#浏览器访问"><span class="nav-number">8.</span> <span class="nav-text">浏览器访问</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -405,7 +438,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">1</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -419,10 +452,10 @@
         <a href="mailto:1013459920@qq.com" title="E-Mail → mailto:1013459920@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://blog.csdn.net/qq1013459920" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq1013459920" rel="noopener" target="_blank"><i class="fa fa-fw fa-csdn"></i>CSDN</a>
+        <a href="https://blog.csdn.net/qq1013459920" title="CSDN → https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq1013459920" rel="noopener" target="_blank"><i class="fa fa-fw fa-book"></i>CSDN</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://www.zhihu.com/people/ruo-xu-tian-yi" title="zhihu → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;ruo-xu-tian-yi" rel="noopener" target="_blank"><i class="fa fa-fw fa-zhihu"></i>zhihu</a>
+        <a href="https://www.zhihu.com/people/ruo-xu-tian-yi" title="zhihu → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;ruo-xu-tian-yi" rel="noopener" target="_blank"><i class="fa fa-fw fa-heartbeat"></i>zhihu</a>
       </span>
   </div>
 
@@ -454,7 +487,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">3k</span>
+    <span title="站点总字数">2k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
@@ -530,7 +563,7 @@
 
   
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"left","width":200,"height":400},"mobile":{"show":true},"react":{"opacity":0.7}});</script></body>
 </html>
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="/js/love.js"></script>
