@@ -35,29 +35,32 @@
     }
 </style>
 
-  <meta name="description" content="千般荒凉，以此为梦。万里蹀躞，以此为归。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="xcatf&#39;s Blog">
-<meta property="og:url" content="http://xcatf.com/index.html">
+  <meta name="description" content="初始的hexo博客主题不是特别美观，我们选择用简约风格的NexT主题来美化我们的博客。目前，我把我暂时的美化设置写在了博客里面，方便以后的查阅。同时，也欢迎大家来踩一踩，共同交流~~">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux服务器下搭建hexo个人博客03：NexT主题基础配置">
+<meta property="og:url" content="http://xcatf.com/2020/02/18/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A203%EF%BC%9ANexT%E4%B8%BB%E9%A2%98%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="xcatf&#39;s Blog">
-<meta property="og:description" content="千般荒凉，以此为梦。万里蹀躞，以此为归。">
+<meta property="og:description" content="初始的hexo博客主题不是特别美观，我们选择用简约风格的NexT主题来美化我们的博客。目前，我把我暂时的美化设置写在了博客里面，方便以后的查阅。同时，也欢迎大家来踩一踩，共同交流~~">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-02-17T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-02-18T14:38:53.382Z">
 <meta property="article:author" content="xcatf">
+<meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://xcatf.com/">
+<link rel="canonical" href="http://xcatf.com/2020/02/18/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A203%EF%BC%9ANexT%E4%B8%BB%E9%A2%98%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome: true,
-    isPost: false
+    isHome: false,
+    isPost: true
   };
 </script>
 
-  <title>xcatf's Blog</title>
+  <title>Linux服务器下搭建hexo个人博客03：NexT主题基础配置 | xcatf's Blog</title>
   
 
 
@@ -201,10 +204,10 @@
             
 
   <div class="posts-expand">
-        
+      
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://xcatf.com/2020/02/18/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A203%EF%BC%9ANexT%E4%B8%BB%E9%A2%98%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -218,8 +221,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/18/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A203%EF%BC%9ANexT%E4%B8%BB%E9%A2%98%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/" class="post-title-link" itemprop="url">Linux服务器下搭建hexo个人博客03：NexT主题基础配置</a>
+          Linux服务器下搭建hexo个人博客03：NexT主题基础配置
         </h1>
 
         <div class="post-meta">
@@ -245,6 +247,13 @@
             </span>
 
           
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
   
   <span class="post-meta-item">
     
@@ -266,6 +275,7 @@
                 <span class="post-meta-item-text">本文字数：</span>
               <span>1.6k</span>
             </span>
+            <div class="post-description">初始的hexo博客主题不是特别美观，我们选择用简约风格的NexT主题来美化我们的博客。目前，我把我暂时的美化设置写在了博客里面，方便以后的查阅。同时，也欢迎大家来踩一踩，共同交流~~</div>
 
         </div>
       </header>
@@ -276,232 +286,133 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          初始的hexo博客主题不是特别美观，我们选择用简约风格的NexT主题来美化我们的博客。目前，我把我暂时的美化设置写在了博客里面，方便以后的查阅。同时，也欢迎大家来踩一踩，共同交流~~
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/02/18/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A203%EF%BC%9ANexT%E4%B8%BB%E9%A2%98%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
+        <h4 id="安装NexT主题"><a href="#安装NexT主题" class="headerlink" title="安装NexT主题"></a>安装NexT主题</h4><p>在hexo目录在使用git命令安装NexT主题，目前NexT主题的版本为V7.7.2，因此可能有些配置与之前版本会存在一点差异</p>
+<p>使用git来安装NexT，指令clone目录为themes/next，便于hexo框架以后更换主题</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
+
+<h4 id="NexT主题设定"><a href="#NexT主题设定" class="headerlink" title="NexT主题设定"></a>NexT主题设定</h4><p>首先我们认识一下配置文件<code>_config.yml</code></p>
+<p>hexo目录下的<code>_config.yml</code>：主题配置文件</p>
+<p>themes/next目录下的<code>_config.yml</code>：站点配置文件</p>
+<p>后面，我们主题的美化，将会经常修改这两个配置文件</p>
+<h4 id="更换当前hexo主题，设置站点名、语言、作者及其相关描述"><a href="#更换当前hexo主题，设置站点名、语言、作者及其相关描述" class="headerlink" title="更换当前hexo主题，设置站点名、语言、作者及其相关描述"></a>更换当前hexo主题，设置站点名、语言、作者及其相关描述</h4><p>打开站点配置文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim _config.yml</span><br></pre></td></tr></table></figure>
+
+<p>vim可在命令模式下:/Site来找到关键字Site，修改相关内容</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">xcatf's</span> <span class="string">Blog</span></span><br><span class="line"><span class="attr">subtitle:</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">千般荒凉，以此为梦。&lt;br&gt;万里蹀躞，以此为归。</span></span><br><span class="line"><span class="attr">keywords:</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">xcatf</span> <span class="comment"># 作者名字</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span> <span class="comment"># NexT V7简体中文为zh-CN</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">''</span> <span class="comment"># timezone为时区，默认设置即可</span></span><br></pre></td></tr></table></figure>
+
+<p>:/theme寻找关键字<code>theme</code>，修改hexo主题</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="attr">plugins:</span> <span class="string">hexo-generate-feed</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="更换风格scheme"><a href="#更换风格scheme" class="headerlink" title="更换风格scheme"></a>更换风格scheme</h4><p>NexT主题有四种不同风格</p>
+<p>在主题配置文件<code>theme/next/_config.yml</code>下查找<code>Schemes</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Schemes</span><br><span class="line">#scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Muse - 默认 Scheme，这是 NexT 最初的版本，黑白主调，大量留白</li>
+<li>Mist - Muse 的紧凑版本，整洁有序的单栏外观</li>
+<li>Pisces - 双栏 Scheme，小家碧玉似的清新</li>
+</ul>
+<p>Scheme 的切换通过更改 <strong>主题配置文件</strong>，搜索 scheme 关键字。 你会看到有三行 scheme 的配置，将你需用启用的 scheme 前面注释 <code>#</code> 去除即可。</p>
+<h4 id="设置菜单"><a href="#设置菜单" class="headerlink" title="设置菜单"></a>设置菜单</h4><p>编辑<code>主题配置文件</code>，寻找关键字<code>menu</code>，根据需要去除<code>#</code>即可</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">home</span>   <span class="comment"># 主页</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">user</span> <span class="comment"># 关于页面</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">tags</span> <span class="comment"># 标签页</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">th</span> <span class="comment"># 分类页</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">archive</span> <span class="comment"># 归档页</span></span><br><span class="line">  <span class="attr">schedule:</span> <span class="string">/schedule/</span> <span class="string">||</span> <span class="string">calendar</span> <span class="comment"># 日程页</span></span><br><span class="line">  <span class="comment">#sitemap: /sitemap.xml || sitemap</span></span><br><span class="line">  <span class="comment">#commonweal: /404/ || heartbeat</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="设置头像"><a href="#设置头像" class="headerlink" title="设置头像"></a>设置头像</h4><p>编辑<code>主题配置文件</code>，寻找关键字<code>avatar</code>，头像的路径在<code>themes/next/source/images</code></p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Sidebar Avatar 头像</span></span><br><span class="line"><span class="attr">avatar:</span></span><br><span class="line">  <span class="comment"># Replace the default image and set the url here.</span></span><br><span class="line">  <span class="attr">url:</span> <span class="string">/images/avatar.png</span> <span class="comment">#图片路径</span></span><br><span class="line">  <span class="comment"># If true, the avatar will be dispalyed in circle.</span></span><br><span class="line">  <span class="attr">rounded:</span> <span class="literal">true</span>   <span class="comment"># 头像会根据你的图片展示成圆形或椭圆</span></span><br><span class="line">  <span class="comment"># If true, the avatar will be rotated with the cursor.</span></span><br><span class="line">  <span class="attr">rotated:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 透明度</span></span><br><span class="line">  <span class="attr">opacity:</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>暂时写到这吧，查阅官方文档可以获得更加详细的帮助</p>
+<p><code>http://theme-next.iissnan.com/</code></p>
+
     </div>
 
     
     
     
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+        <div class="reward-container">
+  <div>您的支持是我创作的不竭动力</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="xcatf 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="xcatf 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
 
         
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://xcatf.com/2020/02/17/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A202%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0GitHub-Pages/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="xcatf">
-      <meta itemprop="description" content="千般荒凉，以此为梦。<br>万里蹀躞，以此为归。">
-    </span>
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>xcatf
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://xcatf.com/2020/02/18/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A203%EF%BC%9ANexT%E4%B8%BB%E9%A2%98%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/" title="Linux服务器下搭建hexo个人博客03：NexT主题基础配置">http://xcatf.com/2020/02/18/Linux服务器下搭建hexo个人博客03：NexT主题基础配置/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="xcatf's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/17/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A202%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0GitHub-Pages/" class="post-title-link" itemprop="url">Linux服务器下搭建hexo个人博客02：hexo部署到GitHub Pages</a>
-        </h1>
+        
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
 
-              <time title="创建时间：2020-02-17 00:00:00" itemprop="dateCreated datePublished" datetime="2020-02-17T00:00:00+08:00">2020-02-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
+    <div class="social-list">
+
+            <div class="social-item">
+              <a target="_blank" class="social-link" href="/atom.xml">
+                <span class="icon">
+                  <i class="fa fa-rss"></i>
                 </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-18 22:46:29" itemprop="dateModified" datetime="2020-02-18T22:46:29+08:00">2020-02-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/" itemprop="url" rel="index">
-                    <span itemprop="name">服务器</span>
-                  </a>
-                </span>
-            </span>
 
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/02/17/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A202%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0GitHub-Pages/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/02/17/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A202%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0GitHub-Pages/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>2.8k</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          如果我们没有服务器的话，把hexo博客部署到GitHub上面是个不错的主意。虽然访问会有些慢，不过极大地方便了我们的管理
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/02/17/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A202%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0GitHub-Pages/">
-                阅读全文 &raquo;
+                <span class="label">RSS</span>
               </a>
             </div>
-          <!--/noindex-->
-        
-      
     </div>
+  </div>
 
+     <div>
+         
+         <!--文字可以自己修改-->
+<div>
     
+        <div style="text-align:center;color: #A2CD5A;font-size:15px;">------------------本文到此结束<i class="fa fa-paw"></i>感谢您的阅读------------------</div>
     
-    
+</div>
+
+
+         
+     </div>
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"><i class="fa fa-tag"></i> linux</a>
+          </div>
 
         
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://xcatf.com/2020/02/16/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A201%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0Nginx/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="xcatf">
-      <meta itemprop="description" content="千般荒凉，以此为梦。<br>万里蹀躞，以此为归。">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="xcatf's Blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/02/16/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A201%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0Nginx/" class="post-title-link" itemprop="url">Linux服务器下搭建hexo个人博客01：hexo部署到Nginx</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-02-16 00:00:00" itemprop="dateCreated datePublished" datetime="2020-02-16T00:00:00+08:00">2020-02-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-18 22:44:10" itemprop="dateModified" datetime="2020-02-18T22:44:10+08:00">2020-02-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="fa fa-comment-o"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/02/16/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A201%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0Nginx/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/02/16/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A201%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0Nginx/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-file-word-o"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>2.3k</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          前几天领了阿里云半年免费的云服务器。最近一直在服务器上捣鼓。听说hexo框架搭建静态博客极其方便，于是用hexo框架搭建了个人博客，部署于云服务器Linux上，后续将会优化我的博客。欢迎大家评论交流~
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/02/16/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A201%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0Nginx/">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/02/17/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A202%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0GitHub-Pages/" rel="prev" title="Linux服务器下搭建hexo个人博客02：hexo部署到GitHub Pages">
+      <i class="fa fa-chevron-left"></i> Linux服务器下搭建hexo个人博客02：hexo部署到GitHub Pages
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
@@ -509,12 +420,10 @@
 
   </div>
 
-  
-
-
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -561,6 +470,7 @@
 
      <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装NexT主题"><span class="nav-number">1.</span> <span class="nav-text">安装NexT主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NexT主题设定"><span class="nav-number">2.</span> <span class="nav-text">NexT主题设定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更换当前hexo主题，设置站点名、语言、作者及其相关描述"><span class="nav-number">3.</span> <span class="nav-text">更换当前hexo主题，设置站点名、语言、作者及其相关描述</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#更换风格scheme"><span class="nav-number">4.</span> <span class="nav-text">更换风格scheme</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置菜单"><span class="nav-number">5.</span> <span class="nav-text">设置菜单</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置头像"><span class="nav-number">6.</span> <span class="nav-text">设置头像</span></a></li></ol></div>
       </div>
       <!--/noindex-->
       <div class="site-overview-wrap sidebar-panel">
