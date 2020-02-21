@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xcatf.com/"/>
-  <updated>2020-02-18T14:38:53.382Z</updated>
+  <updated>2020-02-21T01:52:40.000Z</updated>
   <id>http://xcatf.com/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>云服务器Linux下修改ssh默认端口</title>
+    <link href="http://xcatf.com/2020/02/21/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8Linux%E4%B8%8B%E4%BF%AE%E6%94%B9ssh%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A3/"/>
+    <id>http://xcatf.com/2020/02/21/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8Linux%E4%B8%8B%E4%BF%AE%E6%94%B9ssh%E9%BB%98%E8%AE%A4%E7%AB%AF%E5%8F%A3/</id>
+    <published>2020-02-21T02:03:52.137Z</published>
+    <updated>2020-02-21T01:52:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="修改ssh配置文件中的默认端口"><a href="#修改ssh配置文件中的默认端口" class="headerlink" title="修改ssh配置文件中的默认端口"></a>修改ssh配置文件中的默认端口</h5><p>修改<code>/etc/ssh/sshd_config</code>配置文件</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;ssh&#x2F;sshd_config</span><br></pre></td></tr></table></figure><p>ssh默认监听端口是<code>22</code>，如果不强制说明其它端口，Port 22注不注释都是开放22端口</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># If you want to change the port on a SELinux system, you have to tell</span><br><span class="line"># SELinux about this change.</span><br><span class="line"># semanage port -a -t ssh_port_t -p tcp #PORTNUMBER</span><br><span class="line">#</span><br><span class="line">#Port 22 #默认22端口是被注释的，我们在下面再写一行Port</span><br><span class="line">Port 端口号#这里写你想要的端口</span><br><span class="line">#AddressFamily any</span><br><span class="line">#ListenAddress 0.0.0.0</span><br><span class="line">#ListenAddress ::</span><br></pre></td></tr></table></figure><h5 id="防火墙开放对应端口号"><a href="#防火墙开放对应端口号" class="headerlink" title="防火墙开放对应端口号"></a>防火墙开放对应端口号</h5><p>千万不要急着重启ssh服务器，先让防火墙开放对应端口</p><p><code>注意：permanent代表防火墙对该端口永久开放，没有该字段重启防火墙该端口失效</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone&#x3D;public --add-port&#x3D;端口号&#x2F;tcp --permanent</span><br></pre></td></tr></table></figure><h5 id="防火墙重启服务"><a href="#防火墙重启服务" class="headerlink" title="防火墙重启服务"></a>防火墙重启服务</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart firewalld</span><br></pre></td></tr></table></figure><h5 id="查看端口号是否生效"><a href="#查看端口号是否生效" class="headerlink" title="查看端口号是否生效"></a>查看端口号是否生效</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone&#x3D;public --query-port&#x3D;端口号&#x2F;tcp</span><br><span class="line">yes</span><br></pre></td></tr></table></figure><h5 id="服务器控制台配置对应安全组"><a href="#服务器控制台配置对应安全组" class="headerlink" title="服务器控制台配置对应安全组"></a>服务器控制台配置对应安全组</h5><p><img src="https://img-blog.csdnimg.cn/20200221094958825.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxMTAxMzQ1OTkyMA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h5 id="服务器本地尝试用新端口号登录ssh"><a href="#服务器本地尝试用新端口号登录ssh" class="headerlink" title="服务器本地尝试用新端口号登录ssh"></a>服务器本地尝试用新端口号登录ssh</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh root@localhost -p 端口号</span><br></pre></td></tr></table></figure><h5 id="重启ssh服务"><a href="#重启ssh服务" class="headerlink" title="重启ssh服务"></a>重启ssh服务</h5><p><code>[注]：要确保防火墙&amp;控制台安全组开放新端口前提下再重启ssh服务</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart sshd</span><br></pre></td></tr></table></figure><p>退出连接</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">exit</span><br></pre></td></tr></table></figure><h5 id="修改连接的端口再次连接服务器"><a href="#修改连接的端口再次连接服务器" class="headerlink" title="修改连接的端口再次连接服务器"></a>修改连接的端口再次连接服务器</h5><p>这里我用的Xshell工具</p><p><img src="https://img-blog.csdnimg.cn/20200221094833630.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxMTAxMzQ1OTkyMA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><h5 id="如果出现问题，再次检查前面每个步骤，确保端口对防火墙开放"><a href="#如果出现问题，再次检查前面每个步骤，确保端口对防火墙开放" class="headerlink" title="如果出现问题，再次检查前面每个步骤，确保端口对防火墙开放"></a>如果出现问题，再次检查前面每个步骤，确保端口对防火墙开放</h5><p>出现问题，ssh连接不上服务器的话可以打开服务器控制台，选择<code>VNC</code>连接</p><p><img src="https://img-blog.csdnimg.cn/20200221095045752.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxMTAxMzQ1OTkyMA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>]]></content>
+    
+    <summary type="html">
+    
+      最近服务器受到了ssh暴力破解攻击，目前我的解决方法是修改ssh端口
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="http://xcatf.com/categories/linux/"/>
+    
+    
+      <category term="linux" scheme="http://xcatf.com/tags/linux/"/>
+    
+      <category term="服务器" scheme="http://xcatf.com/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>编译原理笔记</title>
+    <link href="http://xcatf.com/2020/02/20/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/"/>
+    <id>http://xcatf.com/2020/02/20/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/</id>
+    <published>2020-02-19T16:00:00.000Z</published>
+    <updated>2020-02-20T13:48:50.884Z</updated>
+    
+    <content type="html"><![CDATA[<p>`</p><h5 id="解释术语"><a href="#解释术语" class="headerlink" title="解释术语"></a>解释术语</h5><p><code>源语言程序</code>：源语言编写的，有待翻译的程序</p><p><code>目标语言程序</code>：源程序通过翻译加工后生成的程序</p><p><code>翻译程序</code>：指用来把源程序翻译为目标程序的程序</p><p><code>解释程序</code>：这也是一种翻译程序，用样是将高级语言源程序翻译成机器指令。它与编译程序的不同点就在于：它是边翻译边执行的，即输入一句，执行一句，直至将整个源程序翻译并执行完毕</p><p><code>编译程序</code>：源语言为高级语言，目标语言为某台计算机上面的汇编语言或机器语言，则此翻译程序称为编译程序</p><h5 id="编译程序的主要构成部分"><a href="#编译程序的主要构成部分" class="headerlink" title="编译程序的主要构成部分"></a>编译程序的主要构成部分</h5><p><code>词法分析程序</code>：输入源程序，拼单词、检查单词和分析单词，输出单词的机内表达式</p><p><code>语法分析程序</code>：检查源程序中存在的形式语法错误，输出错误处理信息</p><p><code>语义分析程序</code>：进行语义检查和分析语义信息，并把分析的结果保存到各类语义信息表</p><p><code>中间代码生成程序</code>：按照语义规则，讲语法分析程序分析出的语法单位转换为一定形式的中间语言代码。</p><p><code>代码优化程序</code>：对中间代码进行等价变化处理</p><p><code>目标代码生成程序</code>：将优化后的中间代码程序转换为目标代码程序</p><p><code>符合表管理程序</code>：建立、填写和查找等一系列表格工作。</p><p><code>出错管理程序</code>：处理和校正源程序中存在的词法、语法和语义错误。</p>]]></content>
+    
+    <summary type="html">
+    
+      编译原理网课的笔记
+    
+    </summary>
+    
+    
+      <category term="专业课" scheme="http://xcatf.com/categories/%E4%B8%93%E4%B8%9A%E8%AF%BE/"/>
+    
+    
+      <category term="编译原理" scheme="http://xcatf.com/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux服务器下搭建hexo个人博客03：NexT主题基础配置</title>
@@ -83,9 +131,9 @@
       <category term="前端" scheme="http://xcatf.com/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="前端" scheme="http://xcatf.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
       <category term="linux" scheme="http://xcatf.com/tags/linux/"/>
+    
+      <category term="前端" scheme="http://xcatf.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
