@@ -46,7 +46,6 @@
   {{ partial('_scripts/index.swig', {}, {cache: theme.cache.enable}) }}
   {{ partial('_third-party/index.swig', {}, {cache: theme.cache.enable}) }}
 
-  
   {%- if theme.pjax %}
     <div id="pjax">
   {%- endif %}
