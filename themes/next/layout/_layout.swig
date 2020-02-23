@@ -46,6 +46,7 @@
   {{ partial('_scripts/index.swig', {}, {cache: theme.cache.enable}) }}
   {{ partial('_third-party/index.swig', {}, {cache: theme.cache.enable}) }}
 
+  
   {%- if theme.pjax %}
     <div id="pjax">
   {%- endif %}
@@ -60,4 +61,3 @@
 </html>
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="/js/love.js"></script>
-

@@ -43,7 +43,7 @@
 <meta property="og:description" content="初始的hexo博客主题不是特别美观，我们选择用简约风格的NexT主题来美化我们的博客。目前，我把我暂时的美化设置写在了博客里面，方便以后的查阅。同时，也欢迎大家来踩一踩，共同交流~~">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-02-17T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-02-18T14:38:53.382Z">
+<meta property="article:modified_time" content="2020-02-23T03:30:51.226Z">
 <meta property="article:author" content="xcatf">
 <meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary">
@@ -230,10 +230,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-02-18 00:00:00 / 修改时间：22:38:53" itemprop="dateCreated datePublished" datetime="2020-02-18T00:00:00+08:00">2020-02-18</time>
+              <time title="创建时间：2020-02-18 00:00:00" itemprop="dateCreated datePublished" datetime="2020-02-18T00:00:00+08:00">2020-02-18</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-23 11:30:51" itemprop="dateModified" datetime="2020-02-23T11:30:51+08:00">2020-02-23</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -295,14 +301,14 @@
       
         <h4 id="安装NexT主题"><a href="#安装NexT主题" class="headerlink" title="安装NexT主题"></a>安装NexT主题</h4><p>在hexo目录在使用git命令安装NexT主题，目前NexT主题的版本为V7.7.2，因此可能有些配置与之前版本会存在一点差异</p>
 <p>使用git来安装NexT，指令clone目录为themes/next，便于hexo框架以后更换主题</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone http<span class="variable">s:</span>//github.<span class="keyword">com</span>/theme-<span class="keyword">next</span>/hexo-theme-<span class="keyword">next</span> themes/<span class="keyword">next</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="NexT主题设定"><a href="#NexT主题设定" class="headerlink" title="NexT主题设定"></a>NexT主题设定</h4><p>首先我们认识一下配置文件<code>_config.yml</code></p>
 <p>hexo目录下的<code>_config.yml</code>：主题配置文件</p>
 <p>themes/next目录下的<code>_config.yml</code>：站点配置文件</p>
 <p>后面，我们主题的美化，将会经常修改这两个配置文件</p>
 <h4 id="更换当前hexo主题，设置站点名、语言、作者及其相关描述"><a href="#更换当前hexo主题，设置站点名、语言、作者及其相关描述" class="headerlink" title="更换当前hexo主题，设置站点名、语言、作者及其相关描述"></a>更换当前hexo主题，设置站点名、语言、作者及其相关描述</h4><p>打开站点配置文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim _config.yml</span><br></pre></td></tr></table></figure>
+<figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim <span class="module-access"><span class="module"><span class="identifier">_config</span>.</span></span>yml</span><br></pre></td></tr></table></figure>
 
 <p>vim可在命令模式下:/Site来找到关键字Site，修改相关内容</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">xcatf's</span> <span class="string">Blog</span></span><br><span class="line"><span class="attr">subtitle:</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">千般荒凉，以此为梦。&lt;br&gt;万里蹀躞，以此为归。</span></span><br><span class="line"><span class="attr">keywords:</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">xcatf</span> <span class="comment"># 作者名字</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span> <span class="comment"># NexT V7简体中文为zh-CN</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">''</span> <span class="comment"># timezone为时区，默认设置即可</span></span><br></pre></td></tr></table></figure>
@@ -312,7 +318,7 @@
 
 <h4 id="更换风格scheme"><a href="#更换风格scheme" class="headerlink" title="更换风格scheme"></a>更换风格scheme</h4><p>NexT主题有四种不同风格</p>
 <p>在主题配置文件<code>theme/next/_config.yml</code>下查找<code>Schemes</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Schemes</span><br><span class="line">#scheme: Muse</span><br><span class="line">#scheme: Mist</span><br><span class="line">scheme: Pisces</span><br><span class="line">#scheme: Gemini</span><br></pre></td></tr></table></figure>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># Schemes</span></span><br><span class="line"><span class="meta">#scheme: Muse</span></span><br><span class="line"><span class="meta">#scheme: Mist</span></span><br><span class="line">scheme: Pisces</span><br><span class="line"><span class="meta">#scheme: Gemini</span></span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>Muse - 默认 Scheme，这是 NexT 最初的版本，黑白主调，大量留白</li>
@@ -671,4 +677,3 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
 </html>
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="/js/love.js"></script>
-
