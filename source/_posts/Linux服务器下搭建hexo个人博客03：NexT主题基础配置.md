@@ -4,7 +4,10 @@ description: 初始的hexo博客主题不是特别美观，我们选择用简约
 categories: 前端
 date: 2020-2-18
 time: 22:38:12
-tags: linux 
+tags:
+   - linux 
+   - hexo
+   - 服务器
 ---
 
 #### 安装NexT主题

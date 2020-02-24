@@ -3,7 +3,8 @@ title: Linux服务器下搭建hexo个人博客02：hexo部署到GitHub Pages
 tags: 
    - 前端
    - hexo
-categories: 服务器
+   - 服务器
+categories: 前端
 date: 2020-2-17
 time: 12:00:00
 description: 如果我们没有服务器的话，把hexo博客部署到GitHub上面是个不错的主意。虽然访问会有些慢，不过极大地方便了我们的管理
