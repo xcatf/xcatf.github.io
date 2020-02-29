@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"xcatf.com","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"www.xcatf.top","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
 <link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
@@ -38,7 +38,7 @@
   <meta name="description" content="前几天领了阿里云半年免费的云服务器。最近一直在服务器上捣鼓。听说hexo框架搭建静态博客极其方便，于是用hexo框架搭建了个人博客，部署于云服务器Linux上，后续将会优化我的博客。欢迎大家评论交流~">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux服务器下搭建hexo个人博客01：hexo部署到Nginx">
-<meta property="og:url" content="http://xcatf.com/2020/02/16/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A201%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0Nginx/index.html">
+<meta property="og:url" content="http://www.xcatf.top/2020/02/16/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A201%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0Nginx/index.html">
 <meta property="og:site_name" content="xcatf&#39;s Blog">
 <meta property="og:description" content="前几天领了阿里云半年免费的云服务器。最近一直在服务器上捣鼓。听说hexo框架搭建静态博客极其方便，于是用hexo框架搭建了个人博客，部署于云服务器Linux上，后续将会优化我的博客。欢迎大家评论交流~">
 <meta property="og:locale" content="zh_CN">
@@ -53,7 +53,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200216193141199.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxMTAxMzQ1OTkyMA==,size_16,color_FFFFFF,t_70">
 
-<link rel="canonical" href="http://xcatf.com/2020/02/16/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A201%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0Nginx/">
+<link rel="canonical" href="http://www.xcatf.top/2020/02/16/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A201%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0Nginx/">
 
 
 <script id="page-configurations">
@@ -213,7 +213,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://xcatf.com/2020/02/16/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A201%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0Nginx/">
+    <link itemprop="mainEntityOfPage" href="http://www.xcatf.top/2020/02/16/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A201%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0Nginx/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -379,7 +379,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://xcatf.com/2020/02/16/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A201%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0Nginx/" title="Linux服务器下搭建hexo个人博客01：hexo部署到Nginx">http://xcatf.com/2020/02/16/Linux服务器下搭建hexo个人博客01：hexo部署到Nginx/</a>
+    <a href="http://www.xcatf.top/2020/02/16/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A201%EF%BC%9Ahexo%E9%83%A8%E7%BD%B2%E5%88%B0Nginx/" title="Linux服务器下搭建hexo个人博客01：hexo部署到Nginx">http://www.xcatf.top/2020/02/16/Linux服务器下搭建hexo个人博客01：hexo部署到Nginx/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
