@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xcatf.com/"/>
-  <updated>2020-02-24T07:28:41.957Z</updated>
+  <updated>2020-02-29T00:37:39.275Z</updated>
   <id>http://xcatf.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>编译原理作业</title>
+    <link href="http://xcatf.com/2020/02/28/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E4%BD%9C%E4%B8%9A/"/>
+    <id>http://xcatf.com/2020/02/28/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E4%BD%9C%E4%B8%9A/</id>
+    <published>2020-02-27T16:00:00.000Z</published>
+    <updated>2020-02-29T00:37:39.275Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="解释术语"><a href="#解释术语" class="headerlink" title="解释术语"></a>解释术语</h5><p><code>源语言程序</code>：源语言编写的，有待翻译的程序</p><p><code>目标语言程序</code>：源程序通过翻译加工后生成的程序</p><p><code>翻译程序</code>：指用来把源程序翻译为目标程序的程序</p><p><code>解释程序</code>：这也是一种翻译程序，用样是将高级语言源程序翻译成机器指令。它与编译程序的不同点就在于：它是边翻译边执行的，即输入一句，执行一句，直至将整个源程序翻译并执行完毕</p><p><code>编译程序</code>：源语言为高级语言，目标语言为某台计算机上面的汇编语言或机器语言，则此翻译程序称为编译程序</p><h5 id="编译程序的主要构成部分"><a href="#编译程序的主要构成部分" class="headerlink" title="编译程序的主要构成部分"></a>编译程序的主要构成部分</h5><p><code>词法分析程序</code>：输入源程序，拼单词、检查单词和分析单词，输出单词的机内表达式</p><p><code>语法分析程序</code>：检查源程序中存在的形式语法错误，输出错误处理信息</p><p><code>语义分析程序</code>：进行语义检查和分析语义信息，并把分析的结果保存到各类语义信息表</p><p><code>中间代码生成程序</code>：按照语义规则，讲语法分析程序分析出的语法单位转换为一定形式的中间语言代码。</p><p><code>代码优化程序</code>：对中间代码进行等价变化处理</p><p><code>目标代码生成程序</code>：将优化后的中间代码程序转换为目标代码程序</p><p><code>符合表管理程序</code>：建立、填写和查找等一系列表格工作。</p><p><code>出错管理程序</code>：处理和校正源程序中存在的词法、语法和语义错误。</p><h5 id="文法定义的语言"><a href="#文法定义的语言" class="headerlink" title="文法定义的语言"></a>文法定义的语言</h5><p>1.文法<code>G(Z):Z-&gt;aZb|ab</code>定义的是什么样的语言？<br>$$<br>L(G)={a^nb^n|n\geq1}<br>$$<br>2.写出文法<code>G(Z):Z-&gt;AB A-&gt;aBb|ab B-&gt;cB|b</code> 定义的是什么样的语言<br>$$<br>L(G) = {abc^nb|n\geq0,ac^nb^2c^mb|n\geq0&amp;m\geq0}<br>$$<br>3.写出文法<code>G(S):S-&gt;aAb A-&gt;aAb|b</code>定义的是什么样的语言<br>$$<br>L(G) = {a^{n+1}b^{n+2}|n\geq0}<br>$$</p>]]></content>
+    
+    <summary type="html">
+    
+      编译原理作业
+    
+    </summary>
+    
+    
+      <category term="专业课" scheme="http://xcatf.com/categories/%E4%B8%93%E4%B8%9A%E8%AF%BE/"/>
+    
+    
+      <category term="编译原理" scheme="http://xcatf.com/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux服务器下搭建hexo个人博客04：GitHub创建hexo分支备份hexo源文件</title>
@@ -92,29 +115,6 @@
     
     
       <category term="开发工具" scheme="http://xcatf.com/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>编译原理笔记</title>
-    <link href="http://xcatf.com/2020/02/20/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/"/>
-    <id>http://xcatf.com/2020/02/20/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/</id>
-    <published>2020-02-19T16:00:00.000Z</published>
-    <updated>2020-02-23T00:56:18.282Z</updated>
-    
-    <content type="html"><![CDATA[<p>`</p><h5 id="解释术语"><a href="#解释术语" class="headerlink" title="解释术语"></a>解释术语</h5><p><code>源语言程序</code>：源语言编写的，有待翻译的程序</p><p><code>目标语言程序</code>：源程序通过翻译加工后生成的程序</p><p><code>翻译程序</code>：指用来把源程序翻译为目标程序的程序</p><p><code>解释程序</code>：这也是一种翻译程序，用样是将高级语言源程序翻译成机器指令。它与编译程序的不同点就在于：它是边翻译边执行的，即输入一句，执行一句，直至将整个源程序翻译并执行完毕</p><p><code>编译程序</code>：源语言为高级语言，目标语言为某台计算机上面的汇编语言或机器语言，则此翻译程序称为编译程序</p><h5 id="编译程序的主要构成部分"><a href="#编译程序的主要构成部分" class="headerlink" title="编译程序的主要构成部分"></a>编译程序的主要构成部分</h5><p><code>词法分析程序</code>：输入源程序，拼单词、检查单词和分析单词，输出单词的机内表达式</p><p><code>语法分析程序</code>：检查源程序中存在的形式语法错误，输出错误处理信息</p><p><code>语义分析程序</code>：进行语义检查和分析语义信息，并把分析的结果保存到各类语义信息表</p><p><code>中间代码生成程序</code>：按照语义规则，讲语法分析程序分析出的语法单位转换为一定形式的中间语言代码。</p><p><code>代码优化程序</code>：对中间代码进行等价变化处理</p><p><code>目标代码生成程序</code>：将优化后的中间代码程序转换为目标代码程序</p><p><code>符合表管理程序</code>：建立、填写和查找等一系列表格工作。</p><p><code>出错管理程序</code>：处理和校正源程序中存在的词法、语法和语义错误。</p>]]></content>
-    
-    <summary type="html">
-    
-      编译原理网课的笔记
-    
-    </summary>
-    
-    
-      <category term="专业课" scheme="http://xcatf.com/categories/%E4%B8%93%E4%B8%9A%E8%AF%BE/"/>
-    
-    
-      <category term="编译原理" scheme="http://xcatf.com/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"/>
     
   </entry>
   

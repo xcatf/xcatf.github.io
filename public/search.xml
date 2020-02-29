@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>编译原理作业</title>
+    <url>/2020/02/28/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E4%BD%9C%E4%B8%9A/</url>
+    <content><![CDATA[<h5 id="解释术语"><a href="#解释术语" class="headerlink" title="解释术语"></a>解释术语</h5><p><code>源语言程序</code>：源语言编写的，有待翻译的程序</p>
+<p><code>目标语言程序</code>：源程序通过翻译加工后生成的程序</p>
+<p><code>翻译程序</code>：指用来把源程序翻译为目标程序的程序</p>
+<p><code>解释程序</code>：这也是一种翻译程序，用样是将高级语言源程序翻译成机器指令。它与编译程序的不同点就在于：它是边翻译边执行的，即输入一句，执行一句，直至将整个源程序翻译并执行完毕</p>
+<p><code>编译程序</code>：源语言为高级语言，目标语言为某台计算机上面的汇编语言或机器语言，则此翻译程序称为编译程序</p>
+<h5 id="编译程序的主要构成部分"><a href="#编译程序的主要构成部分" class="headerlink" title="编译程序的主要构成部分"></a>编译程序的主要构成部分</h5><p><code>词法分析程序</code>：输入源程序，拼单词、检查单词和分析单词，输出单词的机内表达式</p>
+<p><code>语法分析程序</code>：检查源程序中存在的形式语法错误，输出错误处理信息</p>
+<p><code>语义分析程序</code>：进行语义检查和分析语义信息，并把分析的结果保存到各类语义信息表</p>
+<p><code>中间代码生成程序</code>：按照语义规则，讲语法分析程序分析出的语法单位转换为一定形式的中间语言代码。</p>
+<p><code>代码优化程序</code>：对中间代码进行等价变化处理</p>
+<p><code>目标代码生成程序</code>：将优化后的中间代码程序转换为目标代码程序</p>
+<p><code>符合表管理程序</code>：建立、填写和查找等一系列表格工作。</p>
+<p><code>出错管理程序</code>：处理和校正源程序中存在的词法、语法和语义错误。</p>
+<h5 id="文法定义的语言"><a href="#文法定义的语言" class="headerlink" title="文法定义的语言"></a>文法定义的语言</h5><p>1.文法<code>G(Z):Z-&gt;aZb|ab</code>定义的是什么样的语言？<br>$$<br>L(G)={a^nb^n|n\geq1}<br>$$<br>2.写出文法<code>G(Z):Z-&gt;AB A-&gt;aBb|ab B-&gt;cB|b</code> 定义的是什么样的语言<br>$$<br>L(G) = {abc^nb|n\geq0,ac^nb^2c^mb|n\geq0&amp;m\geq0}<br>$$<br>3.写出文法<code>G(S):S-&gt;aAb A-&gt;aAb|b</code>定义的是什么样的语言<br>$$<br>L(G) = {a^{n+1}b^{n+2}|n\geq0}<br>$$</p>
+]]></content>
+      <categories>
+        <category>专业课</category>
+      </categories>
+      <tags>
+        <tag>编译原理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux服务器下搭建hexo个人博客04：GitHub创建hexo分支备份hexo源文件</title>
     <url>/2020/02/24/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A204%EF%BC%9AGitHub%E5%88%9B%E5%BB%BAhexo%E5%88%86%E6%94%AF%E5%A4%87%E4%BB%BDhexo%E6%BA%90%E6%96%87%E4%BB%B6/</url>
     <content><![CDATA[<h5 id="在之前username-github-io仓库里新建hexo分支"><a href="#在之前username-github-io仓库里新建hexo分支" class="headerlink" title="在之前username.github.io仓库里新建hexo分支"></a>在之前username.github.io仓库里新建hexo分支</h5><p>点击<code>Branch</code>输入<code>hexo</code>，即可创建hexo分支<br>因为我已经创好hexo分支了，所以这里创建分支a示例：<br><img src="https://img-blog.csdnimg.cn/20200223124233208.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxMTAxMzQ1OTkyMA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
@@ -98,31 +123,6 @@
       </categories>
       <tags>
         <tag>开发工具</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>编译原理笔记</title>
-    <url>/2020/02/20/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<p>`</p>
-<h5 id="解释术语"><a href="#解释术语" class="headerlink" title="解释术语"></a>解释术语</h5><p><code>源语言程序</code>：源语言编写的，有待翻译的程序</p>
-<p><code>目标语言程序</code>：源程序通过翻译加工后生成的程序</p>
-<p><code>翻译程序</code>：指用来把源程序翻译为目标程序的程序</p>
-<p><code>解释程序</code>：这也是一种翻译程序，用样是将高级语言源程序翻译成机器指令。它与编译程序的不同点就在于：它是边翻译边执行的，即输入一句，执行一句，直至将整个源程序翻译并执行完毕</p>
-<p><code>编译程序</code>：源语言为高级语言，目标语言为某台计算机上面的汇编语言或机器语言，则此翻译程序称为编译程序</p>
-<h5 id="编译程序的主要构成部分"><a href="#编译程序的主要构成部分" class="headerlink" title="编译程序的主要构成部分"></a>编译程序的主要构成部分</h5><p><code>词法分析程序</code>：输入源程序，拼单词、检查单词和分析单词，输出单词的机内表达式</p>
-<p><code>语法分析程序</code>：检查源程序中存在的形式语法错误，输出错误处理信息</p>
-<p><code>语义分析程序</code>：进行语义检查和分析语义信息，并把分析的结果保存到各类语义信息表</p>
-<p><code>中间代码生成程序</code>：按照语义规则，讲语法分析程序分析出的语法单位转换为一定形式的中间语言代码。</p>
-<p><code>代码优化程序</code>：对中间代码进行等价变化处理</p>
-<p><code>目标代码生成程序</code>：将优化后的中间代码程序转换为目标代码程序</p>
-<p><code>符合表管理程序</code>：建立、填写和查找等一系列表格工作。</p>
-<p><code>出错管理程序</code>：处理和校正源程序中存在的词法、语法和语义错误。</p>
-]]></content>
-      <categories>
-        <category>专业课</category>
-      </categories>
-      <tags>
-        <tag>编译原理</tag>
       </tags>
   </entry>
   <entry>
