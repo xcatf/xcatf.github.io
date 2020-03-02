@@ -35,28 +35,20 @@
     }
 </style>
 
-  <meta name="description" content="vs code是一款极易拓展的ide，在vs code拥有美观的主题可以选择，好看的字体和主题将提升我们的编程舒适度~">
+  <meta name="description" content="ACM选拔赛中的一道数据结构题，用set&#x2F;单调栈，线段树都可以解决，后续将学习单调栈的解法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vs code字体与主题推荐">
-<meta property="og:url" content="http://www.xcatf.top/2020/02/23/vs-code%E5%AD%97%E4%BD%93%E4%B8%8E%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90/index.html">
+<meta property="og:title" content="主席树区间查询比某个值次小的数">
+<meta property="og:url" content="http://www.xcatf.top/2020/03/02/%E4%B8%BB%E5%B8%AD%E6%A0%91%E5%8C%BA%E9%97%B4%E6%9F%A5%E8%AF%A2%E6%AF%94%E6%9F%90%E4%B8%AA%E5%80%BC%E6%AC%A1%E5%B0%8F%E7%9A%84%E6%95%B0/index.html">
 <meta property="og:site_name" content="xcatf&#39;s Blog">
-<meta property="og:description" content="vs code是一款极易拓展的ide，在vs code拥有美观的主题可以选择，好看的字体和主题将提升我们的编程舒适度~">
+<meta property="og:description" content="ACM选拔赛中的一道数据结构题，用set&#x2F;单调栈，线段树都可以解决，后续将学习单调栈的解法">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200222151714997.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxMTAxMzQ1OTkyMA==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/2020022215204495.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxMTAxMzQ1OTkyMA==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/2020022215285129.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxMTAxMzQ1OTkyMA==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200222152932905.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxMTAxMzQ1OTkyMA==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200222152713955.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxMTAxMzQ1OTkyMA==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200222154421936.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxMTAxMzQ1OTkyMA==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200222153138284.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxMTAxMzQ1OTkyMA==,size_16,color_FFFFFF,t_70">
-<meta property="article:published_time" content="2020-02-22T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-02-29T04:34:37.862Z">
+<meta property="article:published_time" content="2020-03-02T03:53:18.766Z">
+<meta property="article:modified_time" content="2020-03-02T03:53:18.763Z">
 <meta property="article:author" content="xcatf">
-<meta property="article:tag" content="开发工具">
+<meta property="article:tag" content="主席树">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200222151714997.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxMTAxMzQ1OTkyMA==,size_16,color_FFFFFF,t_70">
 
-<link rel="canonical" href="http://www.xcatf.top/2020/02/23/vs-code%E5%AD%97%E4%BD%93%E4%B8%8E%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90/">
+<link rel="canonical" href="http://www.xcatf.top/2020/03/02/%E4%B8%BB%E5%B8%AD%E6%A0%91%E5%8C%BA%E9%97%B4%E6%9F%A5%E8%AF%A2%E6%AF%94%E6%9F%90%E4%B8%AA%E5%80%BC%E6%AC%A1%E5%B0%8F%E7%9A%84%E6%95%B0/">
 
 
 <script id="page-configurations">
@@ -68,7 +60,7 @@
   };
 </script>
 
-  <title>vs code字体与主题推荐 | xcatf's Blog</title>
+  <title>主席树区间查询比某个值次小的数 | xcatf's Blog</title>
   
 
 
@@ -216,7 +208,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://www.xcatf.top/2020/02/23/vs-code%E5%AD%97%E4%BD%93%E4%B8%8E%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90/">
+    <link itemprop="mainEntityOfPage" href="http://www.xcatf.top/2020/03/02/%E4%B8%BB%E5%B8%AD%E6%A0%91%E5%8C%BA%E9%97%B4%E6%9F%A5%E8%AF%A2%E6%AF%94%E6%9F%90%E4%B8%AA%E5%80%BC%E6%AC%A1%E5%B0%8F%E7%9A%84%E6%95%B0/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -229,7 +221,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          vs code字体与主题推荐
+          主席树区间查询比某个值次小的数
         </h1>
 
         <div class="post-meta">
@@ -239,29 +231,22 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-02-23 00:00:00" itemprop="dateCreated datePublished" datetime="2020-02-23T00:00:00+08:00">2020-02-23</time>
+              <time title="创建时间：2020-03-02 11:53:18" itemprop="dateCreated datePublished" datetime="2020-03-02T11:53:18+08:00">2020-03-02</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-29 12:34:37" itemprop="dateModified" datetime="2020-02-29T12:34:37+08:00">2020-02-29</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ide/" itemprop="url" rel="index">
-                    <span itemprop="name">ide</span>
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
                   </a>
                 </span>
             </span>
 
           
-            <span id="/2020/02/23/vs-code%E5%AD%97%E4%BD%93%E4%B8%8E%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90/" class="post-meta-item leancloud_visitors" data-flag-title="vs code字体与主题推荐" title="阅读次数">
+            <span id="/2020/03/02/%E4%B8%BB%E5%B8%AD%E6%A0%91%E5%8C%BA%E9%97%B4%E6%9F%A5%E8%AF%A2%E6%AF%94%E6%9F%90%E4%B8%AA%E5%80%BC%E6%AC%A1%E5%B0%8F%E7%9A%84%E6%95%B0/" class="post-meta-item leancloud_visitors" data-flag-title="主席树区间查询比某个值次小的数" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -283,8 +268,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/02/23/vs-code%E5%AD%97%E4%BD%93%E4%B8%8E%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/02/23/vs-code%E5%AD%97%E4%BD%93%E4%B8%8E%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/03/02/%E4%B8%BB%E5%B8%AD%E6%A0%91%E5%8C%BA%E9%97%B4%E6%9F%A5%E8%AF%A2%E6%AF%94%E6%9F%90%E4%B8%AA%E5%80%BC%E6%AC%A1%E5%B0%8F%E7%9A%84%E6%95%B0/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/03/02/%E4%B8%BB%E5%B8%AD%E6%A0%91%E5%8C%BA%E9%97%B4%E6%9F%A5%E8%AF%A2%E6%AF%94%E6%9F%90%E4%B8%AA%E5%80%BC%E6%AC%A1%E5%B0%8F%E7%9A%84%E6%95%B0/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -294,9 +279,9 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>296</span>
+              <span>1.6k</span>
             </span>
-            <div class="post-description">vs code是一款极易拓展的ide，在vs code拥有美观的主题可以选择，好看的字体和主题将提升我们的编程舒适度~</div>
+            <div class="post-description">ACM选拔赛中的一道数据结构题，用set/单调栈，线段树都可以解决，后续将学习单调栈的解法</div>
 
         </div>
       </header>
@@ -307,17 +292,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <blockquote>
-<p>vs code作为一款轻量级编辑器，拥有海量的插件系统，适应于多种语言开发，主题字体也可以完全由自己设定，今天心血来潮，尝试美化了一下我的vs code主题与字体</p>
-</blockquote>
-<h5 id="美化效果"><a href="#美化效果" class="headerlink" title="美化效果"></a>美化效果</h5><h4 id="C"><a href="#C" class="headerlink" title="C++"></a><code>C++</code></h4><p><img src="https://img-blog.csdnimg.cn/20200222151714997.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxMTAxMzQ1OTkyMA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h4 id="python"><a href="#python" class="headerlink" title="python"></a><code>python</code></h4><p><img src="https://img-blog.csdnimg.cn/2020022215204495.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxMTAxMzQ1OTkyMA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h4 id="Java"><a href="#Java" class="headerlink" title="Java"></a><code>Java</code></h4><p><img src="https://img-blog.csdnimg.cn/2020022215285129.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxMTAxMzQ1OTkyMA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h4 id="前端"><a href="#前端" class="headerlink" title="前端"></a><code>前端</code></h4><p><img src="https://img-blog.csdnimg.cn/20200222152932905.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxMTAxMzQ1OTkyMA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h5 id="字体推荐"><a href="#字体推荐" class="headerlink" title="字体推荐"></a>字体推荐</h5><h4 id="Hack"><a href="#Hack" class="headerlink" title="Hack"></a><code>Hack</code></h4><p>链接：<a href="https://pan.baidu.com/s/1JmlFQ-Bg4sDMjnPNfXnK3w" target="_blank" rel="noopener">https://pan.baidu.com/s/1JmlFQ-Bg4sDMjnPNfXnK3w</a><br>提取码：47r5<br>如果链接失效了，网上资源很多很多，自己去找Hack字体吧哈哈哈<br>下载好字体后，把字体的相关文件放到<code>C:\Windows\Fonts</code>即可<br><img src="https://img-blog.csdnimg.cn/20200222152713955.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxMTAxMzQ1OTkyMA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h5 id="vs-code修改默认字体"><a href="#vs-code修改默认字体" class="headerlink" title="vs code修改默认字体"></a>vs code修改默认字体</h5><p>打开vs code<code>设置</code>，搜索关键字<code>font</code>，把第一个字体改为<code>Hack</code>即可<br><img src="https://img-blog.csdnimg.cn/20200222154421936.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxMTAxMzQ1OTkyMA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h5 id="主题推荐"><a href="#主题推荐" class="headerlink" title="主题推荐"></a>主题推荐</h5><p><code>Tiny Light</code></p>
-<h5 id="直接安装即可"><a href="#直接安装即可" class="headerlink" title="直接安装即可"></a>直接安装即可</h5><p><img src="https://img-blog.csdnimg.cn/20200222153138284.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxMTAxMzQ1OTkyMA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+        <p><a href="http://acm.hnucm.edu.cn/JudgeOnline/problem.php?id=1642" target="_blank" rel="noopener">题目链接：无聊的木头</a></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> ll;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">const</span> <span class="keyword">int</span> inf = <span class="number">999999999</span>;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">1e5</span> + <span class="number">5</span>;</span><br><span class="line"><span class="keyword">static</span> <span class="keyword">const</span> ll mod = <span class="number">998244353</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Tree</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> l, r;</span><br><span class="line">    <span class="keyword">bool</span> f;</span><br><span class="line">&#125;tr[maxn &lt;&lt; <span class="number">2</span>];</span><br><span class="line"><span class="keyword">int</span> a[maxn], idx[maxn], mp[maxn * <span class="number">10</span>], ans[maxn];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">pushUp</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    tr[x].f = tr[x &lt;&lt; <span class="number">1</span>].f | tr[x &lt;&lt; <span class="number">1</span> | <span class="number">1</span>].f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">build</span><span class="params">(<span class="keyword">int</span> now, <span class="keyword">int</span> l, <span class="keyword">int</span> r)</span></span>&#123;</span><br><span class="line">    tr[now].l = l;</span><br><span class="line">    tr[now].r = r;</span><br><span class="line">    tr[now].f = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(l == r) <span class="keyword">return</span> ;</span><br><span class="line">    <span class="keyword">int</span> m = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    build(now &lt;&lt; <span class="number">1</span>, l, m);</span><br><span class="line">    build(now &lt;&lt; <span class="number">1</span> | <span class="number">1</span>, m + <span class="number">1</span>, r);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> now, <span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(tr[now].l == tr[now].r)&#123;</span><br><span class="line">        tr[now].f = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(tr[now &lt;&lt; <span class="number">1</span>].r &gt;= x) update(now &lt;&lt; <span class="number">1</span>, x);</span><br><span class="line">    <span class="keyword">else</span> update(now &lt;&lt; <span class="number">1</span> | <span class="number">1</span>, x);</span><br><span class="line">    pushUp(now);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span> now, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(i &gt; j) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span>(!tr[now].f) <span class="keyword">return</span> <span class="number">0</span>;    </span><br><span class="line">    <span class="keyword">if</span>(tr[now].l == tr[now].r) <span class="keyword">return</span> tr[now].l;</span><br><span class="line">    <span class="keyword">if</span>(tr[now &lt;&lt; <span class="number">1</span>].r &gt;= j) <span class="keyword">return</span> query(now &lt;&lt; <span class="number">1</span>, i, j);</span><br><span class="line">    <span class="keyword">if</span>(tr[now &lt;&lt; <span class="number">1</span> | <span class="number">1</span>].l &lt;= i) <span class="keyword">return</span> query(now &lt;&lt; <span class="number">1</span> | <span class="number">1</span>, i, j);</span><br><span class="line">    <span class="keyword">int</span> res = query(now &lt;&lt; <span class="number">1</span> | <span class="number">1</span>, i, j);    <span class="comment">//先跑右孩子</span></span><br><span class="line">    <span class="keyword">if</span>(res) <span class="keyword">return</span> res;</span><br><span class="line">    <span class="keyword">return</span> query(now &lt;&lt; <span class="number">1</span>, i, j);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> t;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;t);</span><br><span class="line">    <span class="keyword">while</span>(t--)&#123;</span><br><span class="line">        <span class="built_in">memset</span>(mp, <span class="number">0</span>, <span class="keyword">sizeof</span>(mp));</span><br><span class="line">        <span class="keyword">int</span> n;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i)&#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;idx[i]);</span><br><span class="line">            a[i] = idx[i];</span><br><span class="line">        &#125;</span><br><span class="line">        sort(a + <span class="number">1</span>, a + n + <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">int</span> cnt = unique(a + <span class="number">1</span>, a + n + <span class="number">1</span>) - a - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; ++i) idx[i] = lower_bound(a + <span class="number">1</span>, a + cnt + <span class="number">1</span>, idx[i]) - a;</span><br><span class="line">        build(<span class="number">1</span>, <span class="number">1</span>, cnt);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = n; i &gt;= <span class="number">1</span>; --i)&#123;</span><br><span class="line">            <span class="keyword">int</span> id = query(<span class="number">1</span>, <span class="number">1</span>, idx[i] - <span class="number">1</span>);</span><br><span class="line">            ans[i] = mp[id];</span><br><span class="line">            update(<span class="number">1</span>, idx[i]);</span><br><span class="line">            mp[idx[i]] = i;     <span class="comment">//多个符合条件选择下标最小的那个</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; ++i) <span class="built_in">printf</span>(<span class="string">"%d "</span>, ans[i]);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"0\n"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
 
@@ -353,7 +329,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://www.xcatf.top/2020/02/23/vs-code%E5%AD%97%E4%BD%93%E4%B8%8E%E4%B8%BB%E9%A2%98%E6%8E%A8%E8%8D%90/" title="vs code字体与主题推荐">http://www.xcatf.top/2020/02/23/vs-code字体与主题推荐/</a>
+    <a href="http://www.xcatf.top/2020/03/02/%E4%B8%BB%E5%B8%AD%E6%A0%91%E5%8C%BA%E9%97%B4%E6%9F%A5%E8%AF%A2%E6%AF%94%E6%9F%90%E4%B8%AA%E5%80%BC%E6%AC%A1%E5%B0%8F%E7%9A%84%E6%95%B0/" title="主席树区间查询比某个值次小的数">http://www.xcatf.top/2020/03/02/主席树区间查询比某个值次小的数/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -394,7 +370,7 @@
      </div>
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/" rel="tag"><i class="fa fa-tag"></i> 开发工具</a>
+              <a href="/tags/%E4%B8%BB%E5%B8%AD%E6%A0%91/" rel="tag"><i class="fa fa-tag"></i> 主席树</a>
           </div>
 
         
@@ -403,13 +379,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/02/18/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A203%EF%BC%9ANexT%E4%B8%BB%E9%A2%98%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/" rel="prev" title="Linux服务器下搭建hexo个人博客03：NexT主题基础配置">
-      <i class="fa fa-chevron-left"></i> Linux服务器下搭建hexo个人博客03：NexT主题基础配置
+    <a href="/2020/02/29/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8B%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A204%EF%BC%9AGitHub%E5%88%9B%E5%BB%BAhexo%E5%88%86%E6%94%AF%E5%A4%87%E4%BB%BDhexo%E6%BA%90%E6%96%87%E4%BB%B6/" rel="prev" title="Linux服务器下搭建hexo个人博客04：GitHub创建hexo分支备份hexo源文件">
+      <i class="fa fa-chevron-left"></i> Linux服务器下搭建hexo个人博客04：GitHub创建hexo分支备份hexo源文件
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/02/26/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E4%BD%9C%E4%B8%9A/" rel="next" title="编译原理作业">
-      编译原理作业 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -470,7 +443,6 @@
 
      <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#美化效果"><span class="nav-number">1.</span> <span class="nav-text">美化效果</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#C"><span class="nav-number"></span> <span class="nav-text">C++</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#python"><span class="nav-number"></span> <span class="nav-text">python</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java"><span class="nav-number"></span> <span class="nav-text">Java</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#前端"><span class="nav-number"></span> <span class="nav-text">前端</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#字体推荐"><span class="nav-number">1.</span> <span class="nav-text">字体推荐</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Hack"><span class="nav-number"></span> <span class="nav-text">Hack</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#vs-code修改默认字体"><span class="nav-number">1.</span> <span class="nav-text">vs code修改默认字体</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#主题推荐"><span class="nav-number">2.</span> <span class="nav-text">主题推荐</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#直接安装即可"><span class="nav-number">3.</span> <span class="nav-text">直接安装即可</span></a></li></ol></div>
       </div>
       <!--/noindex-->
       <div class="site-overview-wrap sidebar-panel">
