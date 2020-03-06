@@ -190,7 +190,7 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  GitHub: https://github.com/html1211 || github
+  GitHub: https://github.com/xcatf || github
   CSDN: https://blog.csdn.net/qq1013459920 || copyright
   bilibili: https://space.bilibili.com/266711394 || snowflake-o
   zhihu: https://www.zhihu.com/people/ruo-xu-tian-yi || paper-plane
