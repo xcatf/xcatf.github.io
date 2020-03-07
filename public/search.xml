@@ -107,7 +107,26 @@
 <p><code>目标代码生成程序</code>：将优化后的中间代码程序转换为目标代码程序</p>
 <p><code>符合表管理程序</code>：建立、填写和查找等一系列表格工作。</p>
 <p><code>出错管理程序</code>：处理和校正源程序中存在的词法、语法和语义错误。</p>
-<h5 id="文法定义的语言"><a href="#文法定义的语言" class="headerlink" title="文法定义的语言"></a>文法定义的语言</h5><p>1.文法<code>G(Z):Z-&gt;aZb|ab</code>定义的是什么样的语言？<br>$$<br>L(G)={a^nb^n|n\geq1}<br>$$<br>2.写出文法<code>G(Z):Z-&gt;AB A-&gt;aBb|ab B-&gt;cB|b</code> 定义的是什么样的语言<br>$$<br>L(G) = {abc^nb|n\geq0}，{ac^nb^2c^mb|n\geq0,m\geq0}<br>$$<br>3.写出文法<code>G(S):S-&gt;aAb A-&gt;aAb|b</code>定义的是什么样的语言<br>$$<br>L(G) = {a^{n+1}b^{n+2}|n\geq0}<br>$$</p>
+<h5 id="文法定义的语言"><a href="#文法定义的语言" class="headerlink" title="文法定义的语言"></a>文法定义的语言</h5><p>1.文法<code>G(Z):Z-&gt;aZb|ab</code>定义的是什么样的语言？ </p>
+<p>$L(G)={a^nb^n|n\geq1}$</p>
+<p>2.写出文法<code>G(Z):Z-&gt;AB A-&gt;aBb|ab B-&gt;cB|b</code> 定义的是什么样的语言 </p>
+<p>$L(G) = {abc^nb|n\geq0},{ac^mb^2c^nb|m\geq0,n\geq0}$</p>
+<p>3.写出文法<code>G(S):S-&gt;aAb A-&gt;aAb|b</code>定义的是什么样的语言</p>
+<p>$L(G) = {a^{n}b^{n+1}|n\geq1}$</p>
+<h5 id="构造产生如下语言的上下文无关文法各一个"><a href="#构造产生如下语言的上下文无关文法各一个" class="headerlink" title="构造产生如下语言的上下文无关文法各一个"></a>构造产生如下语言的上下文无关文法各一个</h5><p>(1)${a^nb^mc^{2m}|n,m\geq0}$</p>
+<p>$S-&gt;AB|\varepsilon$<br>$A-&gt;aAb|ab$<br>$B-&gt;bBc|bc$</p>
+<p>(2)${wcw^R|w\varepsilon{a,b}^{\ast}}$</p>
+<p>$S-&gt;aSa|bSb|c$</p>
+<p>(3)${a^nb^mc^k|n=m或m=k}$</p>
+<p>$S-&gt;AB|DE|\varepsilon$<br>$A-&gt;aAb|ab$<br>$B-&gt;cB|c|\varepsilon$<br>$D-&gt;aD|a|\varepsilon$<br>$E-&gt;bEc|bc$</p>
+<h5 id="第三周作业"><a href="#第三周作业" class="headerlink" title="第三周作业"></a>第三周作业</h5><p><code>1.构造下面语言的上下文无关文法</code><br>(1)${a^nb^n|b\geq0}$</p>
+<p>$S-&gt;aSb|\varepsilon$</p>
+<p>(2)${a^mb^n|m{\geq}n{\geq}0}$</p>
+<p>$S-&gt;AB$<br>$A-&gt;aA|a|\varepsilon$<br>$B-&gt;aBb|ab|\varepsilon$</p>
+<p><code>已知如下文法</code><br>$G[E]:E-&gt;E+T|T$<br>$T-&gt;T{\ast}F|F$<br>$F-&gt;(E)|a$<br>(1)求(a+a)*(a+a)的最右推导</p>
+<figure class="highlight excel"><table><tr><td class="code"><pre><span class="line">E-&gt;<span class="built_in">T</span>=&gt;<span class="built_in">T</span>*F=&gt;<span class="built_in">T</span>*(E)=&gt;<span class="built_in">T</span>*(E+<span class="built_in">T</span>)</span><br><span class="line">=&gt;<span class="built_in">T</span>*(E+F)=&gt;<span class="built_in">T</span>*(E+a)=&gt;<span class="built_in">T</span>*(<span class="built_in">T</span>+a)</span><br><span class="line">=&gt;<span class="built_in">T</span>*(F+a)=&gt;<span class="built_in">T</span>*(a+a)=&gt;(E)*(a+a)</span><br><span class="line">=&gt;(E+<span class="built_in">T</span>)*(a+a)=&gt;(E+F)*(a+a)</span><br><span class="line">=&gt;(E+a)*(a+a)=&gt;(<span class="built_in">T</span>+a)*(a+a)</span><br><span class="line">=&gt;(F+a)*(a+a)=&gt;(a+a)*(a+a)</span><br></pre></td></tr></table></figure>
+<p>(2)求(a+a)*(a+a)的语法树</p>
+<p><code>略</code></p>
 ]]></content>
       <categories>
         <category>专业课</category>
